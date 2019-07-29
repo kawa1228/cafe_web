@@ -44,9 +44,15 @@ export default {
   modules: [
     'nuxt-svg-loader',
     '@nuxtjs/style-resources',
+    'nuxt-webfontloader'
   ],
   styleResources: {
     scss: '~/assets/scss/common.scss'
+  },
+  webfontloader: {
+    google: {
+      families: ['Crimson Pro', 'Noto Serif JP']
+    }
   },
   /*
   ** Build configuration
