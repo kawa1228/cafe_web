@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+      <CreeksLogo />
       <h1 class="title">
         cafe_web
       </h1>
@@ -30,10 +30,11 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import CreeksLogo from '~/assets/svg/CreeksLogo.svg'
 
 export default {
   components: {
-    Logo
+    CreeksLogo
   }
 }
 </script>
