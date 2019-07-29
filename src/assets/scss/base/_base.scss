@@ -1,3 +1,19 @@
-div {
-  background: #fff;
+* {
+  text-align: center;
 }
+
+a {
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #231A17;
+  font-weight: 200;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// vars
+$default-en-font-family: 'Crimson Pro';
+$default-jp-font-family: 'Noto Serif JP';
