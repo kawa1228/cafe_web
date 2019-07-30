@@ -2,7 +2,7 @@
   <div class="cafe-web">
     <Header/>
     <nuxt />
-    <Footer class="cafe-web__footer"/>
+    <Footer/>
   </div>
 </template>
 
@@ -20,12 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 .cafe-web {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-  &__footer {
-    margin-top: auto;
-  }
 }
 </style>

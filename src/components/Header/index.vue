@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header__top">
       <h1 class="header__top__title">
-        <CreeksLogo class="header__top__title__logo"/>
+        <nuxt-link to="/"><CreeksLogo class="header__top__title__logo"/></nuxt-link>
       </h1>
       <div class="header__top__lang">
         <nuxt-link to="/">JP</nuxt-link>
