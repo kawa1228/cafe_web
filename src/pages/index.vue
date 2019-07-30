@@ -14,10 +14,10 @@
     </nav>
     <article class="home__contents">
       <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcreekscafe&tabs=timeline&width=184&height=275&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId" width="184" height="275" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-      <img class="home__contents__img" src="/img/CafeAppearance.jpg" alt="カフェ外観">
       <section class="home__contents__about">
-        <p>掛川城や図書館の近く、街中なのに木々に囲まれ、</p>
-        <p>森の中にいるような雰囲気のカフェです。</p>
+        <img class="home__contents__about__img" src="/img/CafeAppearance.jpg" alt="カフェ外観">
+        <p class="home__contents__about__text">掛川城や図書館の近く、街中なのに木々に囲まれ、</p>
+        <p class="home__contents__about__text">森の中にいるような雰囲気のカフェです。</p>
       </section>
     </article>
     <footer class="home__footer">

@@ -1,4 +1,5 @@
 .home {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 
@@ -8,7 +9,6 @@
     &__logo {
       width: 180px;
       height: 180px;
-      margin: 37px;
     }
 
     &__lang {
@@ -24,27 +24,35 @@
 
   &__menu {
     font-family: $default-en-font-family;
-    font-size: 22px;
-    margin: 37px;
+    margin: 30px;
 
     :not(:first-of-type) {
       margin-left: 67px;
     }
+
+    &__tab {
+      font-size: 22px;
+    }
   }
 
   &__contents {
-    margin-top: 83px;
-
-    &__img {
-      width: 524px;
-      height: 275px;
-      margin-left: 53px;
-    }
+    display: flex;
+    justify-content: center;
 
     &__about {
-      font-family: $default-jp-font-family;
-      margin: 25px;
-      line-height: 28px;
+      margin-left: 53px;
+      &__img {
+        width: 524px;
+        height: 275px;
+        margin-bottom: 25px;
+      }
+
+      &__text {
+        font-family: $default-jp-font-family;
+        font-size: 14px;
+        line-height: 28px;
+      }
+
     }
   }
 
@@ -54,11 +62,13 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-top: auto;
     background-color: #000;
 
     &__text {
       font-family: $default-jp-font-family;
       color: #fff;
+      font-size: 12px;
     }
 
     &__logo {
