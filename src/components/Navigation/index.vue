@@ -1,8 +1,10 @@
 <template>
-  <nav class="home__menu">
-    <nuxt-link class="home__menu__tab" to="/">ABOUT</nuxt-link>
-    <nuxt-link class="home__menu__tab" to="/">MENU</nuxt-link>
-    <nuxt-link class="home__menu__tab" to="/">PHOTO</nuxt-link>
+  <nav>
+    <ul class="navigation__menu">
+      <li><nuxt-link to="/">ABOUT</nuxt-link></li>
+      <li><nuxt-link to="/">MENU</nuxt-link></li>
+      <li><nuxt-link to="/">PHOTO</nuxt-link></li>
+    </ul>
   </nav>
 </template>
 
