@@ -1,28 +1,26 @@
-.home {
-  &__contents {
-    display: flex;
-    justify-content: center;
+.contents {
+  display: flex;
+  justify-content: center;
 
-    &__main {
-      text-align: left;
-      margin-left: 53px;
+  &__main {
+    text-align: left;
+    margin-left: 53px;
 
-      &__img {
-        > img {
-          width: 524px;
-          height: 275px;
-          margin-bottom: 25px;
-        }
+    &__img {
+      > img {
+        width: 524px;
+        height: 275px;
+        margin-bottom: 25px;
       }
+    }
 
-      &__text {
-        display: inline-block;
+    &__text {
+      display: inline-block;
 
-        > p {
-          font-family: $default-jp-font-family;
-          font-size: 1.4rem;
-          line-height: 28px;
-        }
+      > p {
+        font-family: $default-jp-font-family;
+        font-size: 1.4rem;
+        line-height: 28px;
       }
     }
   }
