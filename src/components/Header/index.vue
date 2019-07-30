@@ -1,16 +1,16 @@
 <template>
-  <div>
-    <div class="home__top">
-      <h1 class="home__top__title">
-        <CreeksLogo class="home__top__title__logo"/>
+  <header class="header">
+    <div class="header__top">
+      <h1 class="header__top__title">
+        <CreeksLogo class="header__top__title__logo"/>
       </h1>
-      <div class="home__top__lang">
+      <div class="header__top__lang">
         <nuxt-link to="/">JP</nuxt-link>
         <nuxt-link :class="selectedStyle" to="/">EN</nuxt-link>
       </div>
     </div>
     <Navigation/>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     selectedStyle() {
-      return 'home__top__lang--selected'
+      return 'header__top__lang--selected'
     }
   }
 }
