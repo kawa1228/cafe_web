@@ -1,8 +1,4 @@
 .home {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-
   &__top {
     width: 100%;
 
@@ -52,28 +48,6 @@
         font-size: 14px;
         line-height: 28px;
       }
-
-    }
-  }
-
-  &__footer {
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: auto;
-    background-color: #000;
-
-    &__text {
-      font-family: $default-jp-font-family;
-      color: #fff;
-      font-size: 12px;
-    }
-
-    &__logo {
-      width: 100%;
-      margin-top: 9px;
     }
   }
 }

@@ -20,21 +20,15 @@
         <p class="home__contents__about__text">森の中にいるような雰囲気のカフェです。</p>
       </section>
     </article>
-    <footer class="home__footer">
-      <p class="home__footer__text">〒436-0079 静岡県掛川市掛川1070-12</p>
-      <FaceBookLogo class="home__footer__logo"/>
-    </footer>
   </div>
 </template>
 
 <script>
 import CreeksLogo from '~/assets/svg/CreeksLogo.svg'
-import FaceBookLogo from '~/assets/svg/FaceBookLogo.svg'
 
 export default {
   components: {
     CreeksLogo,
-    FaceBookLogo
   },
   computed: {
     selectedStyle() {
