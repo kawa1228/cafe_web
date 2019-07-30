@@ -1,41 +1,4 @@
 .home {
-  &__top {
-    width: 100%;
-
-    &__title {
-      &__logo {
-        width: 180px;
-        height: 180px;
-        visibility: visible;
-      }
-    }
-
-    &__lang {
-      position: absolute;
-      top: 82px;
-      right: 153px;
-
-      &--selected {
-        opacity: 0.3;
-      }
-    }
-  }
-
-  &__menu {
-    font-family: $default-en-font-family;
-    margin: 30px;
-
-    :not(:first-of-type) {
-      margin-left: 67px;
-    }
-
-    &__tab {
-      font-size: 2.2rem;
-      letter-spacing: 0.2em;
-      font-weight: 200;
-    }
-  }
-
   &__contents {
     display: flex;
     justify-content: center;
