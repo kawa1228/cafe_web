@@ -15,24 +15,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.footer {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #000;
-
-  &__text {
-    font-family: $default-jp-font-family;
-    color: #fff;
-    font-size: 12px;
-  }
-
-  &__logo {
-    width: 100%;
-    margin-top: 9px;
-  }
-}
+<style lang="scss" src="./style.scss" scoped>
 </style>

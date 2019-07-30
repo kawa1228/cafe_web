@@ -1,3 +1,19 @@
 .footer {
-  background: red;
+  height: 100px;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__text {
+    font-family: $default-jp-font-family;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  &__logo {
+    width: 100%;
+    margin-top: 9px;
+  }
 }
