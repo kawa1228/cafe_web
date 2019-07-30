@@ -2,9 +2,12 @@
   &__top {
     width: 100%;
 
-    &__logo {
-      width: 180px;
-      height: 180px;
+    &__title {
+      &__logo {
+        width: 180px;
+        height: 180px;
+        visibility: visible;
+      }
     }
 
     &__lang {
@@ -27,7 +30,9 @@
     }
 
     &__tab {
-      font-size: 22px;
+      font-size: 2.2rem;
+      letter-spacing: 0.2em;
+      font-weight: 200;
     }
   }
 
@@ -35,18 +40,26 @@
     display: flex;
     justify-content: center;
 
-    &__about {
+    &__main {
+      text-align: left;
       margin-left: 53px;
+
       &__img {
-        width: 524px;
-        height: 275px;
-        margin-bottom: 25px;
+        > img {
+          width: 524px;
+          height: 275px;
+          margin-bottom: 25px;
+        }
       }
 
       &__text {
-        font-family: $default-jp-font-family;
-        font-size: 14px;
-        line-height: 28px;
+        display: inline-block;
+
+        > p {
+          font-family: $default-jp-font-family;
+          font-size: 1.4rem;
+          line-height: 28px;
+        }
       }
     }
   }
