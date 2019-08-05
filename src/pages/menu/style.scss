@@ -1,0 +1,7 @@
+.menu {
+  dt::before {
+    content: '-';
+    margin-right: 5px;
+    font-family: Sans-Serif;
+  }
+}
