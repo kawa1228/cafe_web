@@ -1,8 +1,8 @@
 <template>
-  <div class="cafe-web">
+  <div class="default-layout">
     <Header/>
-    <nuxt />
-    <Footer/>
+    <nuxt class="default-layout__nuxt"/>
+    <Footer class="default-layout__footer"/>
   </div>
 </template>
 
@@ -19,8 +19,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.cafe-web {
+$footer-height: 100px;
+
+.default-layout {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+
+  &__nuxt {
+    padding-bottom: $footer-height;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    height: $footer-height;
+  }
 }
 </style>
