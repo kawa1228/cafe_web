@@ -16,12 +16,6 @@
 
     &__text {
       display: inline-block;
-
-      > p {
-        font-family: $default-jp-font-family;
-        font-size: 1.4rem;
-        line-height: 28px;
-      }
     }
   }
 }
