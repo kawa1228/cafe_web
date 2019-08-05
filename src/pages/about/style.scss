@@ -1,5 +1,42 @@
 .about {
-  font-family: $default-jp-font-family;
   letter-spacing: 0.1em;
   line-height: 2.8rem;
+
+  &__map {
+    margin: 77px 0 50px 0;
+  }
+
+  &__main {
+    display: inline-block;
+
+    &__list {
+      display: flex;
+      width: calc(100vw - 40vw);
+
+      &__term {
+        width: calc(100% - 63%);
+        margin-right: 12px;
+        display: inline-block;
+        text-align: right;
+      }
+
+      &__description {
+        display: inline-block;
+
+        > dd {
+          text-align: left;
+        }
+      }
+    }
+
+    &__supplement {
+      margin-top: 30px;
+
+      > li::before {
+        content: '-';
+        margin-right: 5px;
+        font-family: Sans-Serif;
+      }
+    }
+  }
 }
