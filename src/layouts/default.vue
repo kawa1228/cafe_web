@@ -29,6 +29,7 @@ $footer-height: 100px;
 
   &__nuxt {
     padding-bottom: $footer-height;
+    margin:100px 0 88px 0;
   }
 
   &__footer {
