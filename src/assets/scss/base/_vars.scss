@@ -1,4 +1,5 @@
 // フォント
-$default-en-font-family: 'Crimson Pro';
-$default-jp-font-family: 'Noto Serif JP';
-$default-font-size: 1.6rem;
+$default-font-family: 'Crimson Pro', 'Noto Serif JP', sans-serif;
+$default-font-size: 1.4rem;
+$default-letter-spacing: 0.1em;
+$default-line-height: 28px;

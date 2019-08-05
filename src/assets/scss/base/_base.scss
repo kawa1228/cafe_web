@@ -15,6 +15,10 @@ html {
 
 body {
   font-size: $default-font-size;
+  font-family: $default-font-family;
+  letter-spacing: $default-letter-spacing;
+  line-height: $default-line-height;
+  font-weight: normal;
 }
 
 h1,
