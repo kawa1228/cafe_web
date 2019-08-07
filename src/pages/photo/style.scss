@@ -1,0 +1,56 @@
+.photo {
+  $photo-page-title-height: 70px;
+
+  %title-style {
+    height: $photo-page-title-height;
+    background: rgba(201, 194, 186, 0.1);
+    margin: 41px 0;
+
+      & > h2 {
+        line-height: $photo-page-title-height;
+      }
+  }
+
+  &__architecture {
+    &__title {
+      @extend %title-style;
+    }
+
+    &__contents {
+      > img {
+        height: 250px;
+      }
+    }
+  }
+
+  &__portrait {
+    &__title {
+      @extend %title-style;
+    }
+
+    &__contents {
+      > img {
+        height: 250px;
+      }
+    }
+  }
+
+  &__auther {
+    background: rgba(201, 194, 186, 0.05);
+    width: 50%;
+    margin: 95px auto;
+    padding: 25px 20px 10px 20px;
+
+    &__name {
+      text-align: left;
+    }
+
+    &__introduction {
+      margin-top: 18px;
+
+      > p {
+        text-align: left;
+      }
+    }
+  }
+}
