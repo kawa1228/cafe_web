@@ -7,9 +7,9 @@
         <h2>Architecture</h2>
       </div>
       <div class="photo__architecture__contents">
-        <img src="/img/Architecture01.jpg" alt="建築写真のサンプル">
-        <img src="/img/Architecture02.jpg" alt="建築写真のサンプル">
-        <img src="/img/Architecture03.jpg" alt="建築写真のサンプル">
+        <no-ssr placeholder="Loading...">
+          <vue-previewer v-for="(item, i) in ArchitectureImg" :images="item.images" mode="image" :options="item.options" :key="`architecture__img--key-${i}`"/>
+        </no-ssr>
       </div>
     </section>
     <section class="photo__portrait">
@@ -17,9 +17,9 @@
         <h2>Portrait</h2>
       </div>
       <div class="photo__portrait__contents">
-        <img src="/img/Portrait01.jpg" alt="人物写真のサンプル">
-        <img src="/img/Portrait02.jpg" alt="人物写真のサンプル">
-        <img src="/img/Portrait03.jpg" alt="人物写真のサンプル">
+        <no-ssr placeholder="Loading...">
+          <vue-previewer v-for="(item, i) in PortraitImg" :images="item.images" mode="image" :options="item.options" :key="`portrait__img--key-${i}`"/>
+        </no-ssr>
       </div>
     </section>
     <section class="photo__auther">
@@ -37,3 +37,24 @@
 
 <style lang="scss" src="./style.scss" scoped>
 </style>
+
+<script>
+export default {
+  computed: {
+    ArchitectureImg() {
+      return [
+        { images: ['/img/Architecture01.jpg'], options: {defaultWidth: '375px', defaultHeight: '251px'} },
+        { images: ['/img/Architecture02.jpg'], options: {defaultWidth: '167px', defaultHeight: '251px'} },
+        { images: ['/img/Architecture03.jpg'], options: {defaultWidth: '167px', defaultHeight: '251px'} }
+      ]
+    },
+    PortraitImg() {
+      return [
+        { images: ['/img/Portrait01.jpg'], options: {defaultWidth: '168px', defaultHeight: '251px'} },
+        { images: ['/img/Portrait02.jpg'], options: {defaultWidth: '376px', defaultHeight: '251px'} },
+        { images: ['/img/Portrait03.jpg'], options: {defaultWidth: '167px', defaultHeight: '251px'} }
+      ]
+    }
+  }
+}
+</script>

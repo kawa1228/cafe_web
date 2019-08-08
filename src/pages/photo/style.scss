@@ -17,9 +17,8 @@
     }
 
     &__contents {
-      > img {
-        height: 250px;
-      }
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -29,9 +28,8 @@
     }
 
     &__contents {
-      > img {
-        height: 250px;
-      }
+      display: flex;
+      justify-content: center;
     }
   }
 
