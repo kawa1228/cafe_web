@@ -16,7 +16,8 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Crimson+Pro|Noto+Serif+JP&display=swap' }
     ]
   },
   /*
@@ -46,16 +47,7 @@ export default {
   modules: [
     'nuxt-svg-loader',
     '@nuxtjs/style-resources',
-    'nuxt-webfontloader'
   ],
-  styleResources: {
-    scss: '~/assets/scss/common.scss'
-  },
-  webfontloader: {
-    google: {
-      families: ['Crimson Pro', 'Noto Serif JP']
-    }
-  },
   /*
   ** Build configuration
   */
