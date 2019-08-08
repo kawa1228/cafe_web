@@ -52,6 +52,9 @@ export default {
   ** Build configuration
   */
   build: {
+    splitChunks: {
+      layouts: true
+    },
     /*
     ** You can extend webpack config here
     */
