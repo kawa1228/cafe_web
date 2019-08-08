@@ -9309,6 +9309,13 @@ vue-hot-reload-api@^2.3.0:
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.3.tgz#2756f46cb3258054c5f4723de8ae7e87302a1ccf"
   integrity sha512-KmvZVtmM26BQOMK1rwUZsrqxEGeKiYSZGA7SNWE6uExx8UX/cj9hq2MRV/wWC3Cq6AoeDGk57rL9YMFRel/q+g==
 
+vue-image-previewer@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/vue-image-previewer/-/vue-image-previewer-0.1.4.tgz#c0179f94de05fe876f07a838da6115b6dd82d6fa"
+  integrity sha512-iNvnGzX0z02/CYPJc0ycQ5H9IAx8+pL7eFh9SJ9dMYCTGrtXIethQnGfAhx2X1ZU3qpMBo1domlJDolxKZ+Q0w==
+  dependencies:
+    vue "^2.6.10"
+
 vue-jest@^3.0.3:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/vue-jest/-/vue-jest-3.0.4.tgz#b6a2b0d874968f26fa775ac901903fece531e08b"
