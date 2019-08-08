@@ -33,6 +33,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/vue-image-previewer.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
