@@ -36,6 +36,7 @@ $footer-height: 100px;
     position: absolute;
     bottom: 0;
     height: $footer-height;
+    width: 100%;
   }
 }
 </style>
