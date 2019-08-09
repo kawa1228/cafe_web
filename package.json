@@ -9,7 +9,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate && node ./lib/rewrite"
   },
   "dependencies": {
     "nuxt": "^2.0.0"
