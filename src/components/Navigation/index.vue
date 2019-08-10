@@ -1,9 +1,15 @@
 <template>
   <nav>
     <ul class="navigation__menu">
-      <li><nuxt-link to="/about">ABOUT</nuxt-link></li>
-      <li><nuxt-link to="/menu">MENU</nuxt-link></li>
-      <li><nuxt-link to="/photo">PHOTO</nuxt-link></li>
+      <li class="navigation__menu__item">
+        <nuxt-link class="navigation__menu__item__link" to="/about">ABOUT</nuxt-link>
+      </li>
+      <li class="navigation__menu__item">
+        <nuxt-link class="navigation__menu__item__link" to="/menu">MENU</nuxt-link>
+      </li>
+      <li class="navigation__menu__item">
+        <nuxt-link class="navigation__menu__item__link" to="/photo">PHOTO</nuxt-link>
+      </li>
     </ul>
   </nav>
 </template>
