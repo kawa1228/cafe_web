@@ -53,6 +53,13 @@ export default {
   ** Build configuration
   */
   build: {
+    postcss: {
+      plugins: {
+        cssnano: {
+          preset: ['default', {minifyFontValues: {removeQuotes: false}}]
+        }
+      }
+    },
     /*
     ** You can extend webpack config here
     */
