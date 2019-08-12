@@ -1,0 +1,40 @@
+.default-layout {
+  $footer-height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+
+  &__navi {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+
+    &__title {
+      font-size: 2rem;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    .title-fade-enter-active {
+      transition: opacity 1s;
+    }
+    .title-fade-enter, .title-fade-leave-to {
+      opacity: 0;
+    }
+  }
+
+  &__nuxt {
+    padding-bottom: $footer-height;
+    margin:100px 0 88px 0;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    height: $footer-height;
+    width: 100%;
+  }
+}

@@ -1,6 +1,12 @@
 <template>
   <div class="default-layout">
-    <Header/>
+    <Header ref="header"/>
+    <div class="default-layout__navi">
+      <transition name="title-fade">
+        <h1 v-if="isShowTitle" class="default-layout__navi__title">Creek's Cafe</h1>
+      </transition>
+      <Navigation/>
+    </div>
     <nuxt class="default-layout__nuxt"/>
     <Footer class="default-layout__footer"/>
   </div>
@@ -8,35 +14,36 @@
 
 <script>
 import Header from '~/components/Header'
+import Navigation from '~/components/Navigation'
 import Footer from '~/components/Footer'
 
 export default {
   components: {
     Header,
+    Navigation,
     Footer
+  },
+  data() {
+    return {
+      isShowTitle: false
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll, { passive: true });
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const header = this.$refs['header'].$el
+      const rect = header.getBoundingClientRect()
+      console.log(rect.height + rect.top)
+      this.isShowTitle = (rect.height + rect.top) <= 15
+    }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-$footer-height: 100px;
-
-.default-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  position: relative;
-
-  &__nuxt {
-    padding-bottom: $footer-height;
-    margin:100px 0 88px 0;
-  }
-
-  &__footer {
-    position: absolute;
-    bottom: 0;
-    height: $footer-height;
-    width: 100%;
-  }
-}
+<style lang="scss" src="./style.scss" scoped>
 </style>
