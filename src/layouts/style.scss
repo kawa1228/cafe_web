@@ -64,6 +64,20 @@
     }
   }
 
+  .menu-enter-active,
+  .menu-leave-active {
+    transition: opacity .5s, transform 1s;
+  }
+  /* 表示するときは左から */
+  .menu-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  /* 消えるときは下へ */
+  .menu-leave-to {
+    opacity: 0;
+  }
+
   &__nuxt {
     @include is-sp {
       margin-top: 20px;

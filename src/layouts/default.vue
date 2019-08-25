@@ -2,17 +2,19 @@
   <div class="default-layout">
     <Header ref="header" :isOpenedMenu="isOpenedMenu" @open-menu="openedMenu" @close-menu="closedMenu"/>
     <!-- TODO: 一連の処理を含めコンポーネントにわける -->
-    <div v-if="isOpenedMenu" class="default-layout__navi--sp">
-      <ul class="default-layout__navi--sp__list">
-        <li class="default-layout__navi--sp__list__item" v-for="(item, i) in menuList" :key="`navi--sp__list__item--${i}`">
-          <nuxt-link @click.native="closedMenu" :to="item.link">{{ item.title }}</nuxt-link>
-        </li>
-        <div class="default-layout__navi--sp__list__access">
-          <p>〒436-0079　静岡県掛川市掛川1070-12</p>
-          <p>JR東海道本線「掛川駅」より徒歩10分</p>
-        </div>
-      </ul>
-    </div>
+    <transition name="menu">
+      <div v-if="isOpenedMenu" class="default-layout__navi--sp">
+        <ul class="default-layout__navi--sp__list">
+          <li class="default-layout__navi--sp__list__item" v-for="(item, i) in menuList" :key="`navi--sp__list__item--${i}`">
+            <nuxt-link @click.native="closedMenu" :to="item.link">{{ item.title }}</nuxt-link>
+          </li>
+          <div class="default-layout__navi--sp__list__access">
+            <p>〒436-0079　静岡県掛川市掛川1070-12</p>
+            <p>JR東海道本線「掛川駅」より徒歩10分</p>
+          </div>
+        </ul>
+      </div>
+    </transition>
     <div class="default-layout__navi">
       <transition name="title-fade">
         <h1 v-if="isShowTitle" class="default-layout__navi__title">Creek's Cafe</h1>
