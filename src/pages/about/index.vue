@@ -19,14 +19,14 @@
       <div class="about__main__list">
         <dt class="about__main__list__term">営業時間</dt>
         <div class="about__main__list__description">
-          <dd>facebookページをご確認ください。</dd>
+          <dd><a href="https://www.facebook.com/creekscafe">facebookページ</a>をご確認ください。</dd>
           <dd>※通常は(水)～(土)、夕方6時からの営業です。</dd>
         </div>
       </div>
       <div class="about__main__list">
         <dt class="about__main__list__term">ご予約・お問い合わせ</dt>
         <div class="about__main__list__description">
-          <dd>facebookページからご連絡ください。</dd>
+          <dd><a href="https://www.facebook.com/messages/t/creekscafe">facebookページ</a>からご連絡ください。</dd>
         </div>
       </div>
       <ul class="about__main__supplement">

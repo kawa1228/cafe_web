@@ -69,6 +69,11 @@
 
         > dd {
           text-align: left;
+
+          > a {
+            color: $facebook-color;
+            border-bottom: 1px solid $facebook-color;
+          }
         }
       }
     }
