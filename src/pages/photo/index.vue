@@ -43,16 +43,16 @@ export default {
   computed: {
     ArchitectureImg() {
       return [
-        { images: ['/img/Architecture01.jpg'], options: {defaultWidth: '375px', defaultHeight: '251px'} },
-        { images: ['/img/Architecture02.jpg'], options: {defaultWidth: '167px', defaultHeight: '251px'} },
-        { images: ['/img/Architecture03.jpg'], options: {defaultWidth: '167px', defaultHeight: '251px'} }
+        { images: [{src: '/img/Architecture01.jpg'}], options: {defaultWidth: '375px', defaultHeight: '251px'} },
+        { images: [{src: '/img/Architecture02.jpg'}], options: {defaultWidth: '167px', defaultHeight: '251px'} },
+        { images: [{src: '/img/Architecture03.jpg'}], options: {defaultWidth: '167px', defaultHeight: '251px'} }
       ]
     },
     PortraitImg() {
       return [
-        { images: ['/img/Portrait01.jpg'], options: {defaultWidth: '168px', defaultHeight: '251px'} },
-        { images: ['/img/Portrait02.jpg'], options: {defaultWidth: '376px', defaultHeight: '251px'} },
-        { images: ['/img/Portrait03.jpg'], options: {defaultWidth: '167px', defaultHeight: '251px'} }
+        { images: [{src: '/img/Portrait01.jpg'}], options: {defaultWidth: '168px', defaultHeight: '251px'} },
+        { images: [{src: '/img/Portrait02.jpg'}], options: {defaultWidth: '376px', defaultHeight: '251px'} },
+        { images: [{src: '/img/Portrait03.jpg'}], options: {defaultWidth: '167px', defaultHeight: '251px'} }
       ]
     }
   }
