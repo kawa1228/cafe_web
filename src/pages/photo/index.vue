@@ -6,7 +6,28 @@
       <div class="photo__architecture__title">
         <h2>Architecture</h2>
       </div>
-      <div class="photo__architecture__contents">
+      <!-- TODO: コンポーネントに分ける -->
+      <no-ssr v-if="isSp">
+        <carousel
+          class="photo__architecture__carousel"
+          :per-page="1"
+          :navigation-enabled="true"
+          navigation-prev-label="〈"
+          navigation-next-label="〉"
+          :pagination-enabled="true"
+        >
+          <slide>
+            <img class="photo__architecture__carousel__slide__img" src='/img/Architecture01.jpg' alt="">
+          </slide>
+          <slide>
+            <img class="photo__architecture__carousel__slide__img" src='/img/Architecture02.jpg' alt="">
+          </slide>
+          <slide>
+            <img class="photo__architecture__carousel__slide__img" src='/img/Architecture03.jpg' alt="">
+          </slide>
+        </carousel>
+      </no-ssr>
+      <div v-else class="photo__architecture__contents">
         <no-ssr placeholder="Loading...">
           <vue-previewer v-for="(item, i) in ArchitectureImg" :images="item.images" mode="image" :options="item.options" :key="`architecture__img--key-${i}`"/>
         </no-ssr>
@@ -16,7 +37,27 @@
       <div class="photo__portrait__title">
         <h2>Portrait</h2>
       </div>
-      <div class="photo__portrait__contents">
+      <no-ssr v-if="isSp">
+        <carousel
+          class="photo__architecture__carousel"
+          :per-page="1"
+          :navigation-enabled="true"
+          navigation-prev-label="〈"
+          navigation-next-label="〉"
+          :pagination-enabled="true"
+        >
+          <slide>
+            <img class="photo__architecture__carousel__slide__img" src='/img/Portrait01.jpg' alt="">
+          </slide>
+          <slide>
+            <img class="photo__architecture__carousel__slide__img" src='/img/Portrait02.jpg' alt="">
+          </slide>
+          <slide>
+            <img class="photo__architecture__carousel__slide__img" src='/img/Portrait03.jpg' alt="">
+          </slide>
+        </carousel>
+      </no-ssr>
+      <div v-else class="photo__portrait__contents">
         <no-ssr placeholder="Loading...">
           <vue-previewer v-for="(item, i) in PortraitImg" :images="item.images" mode="image" :options="item.options" :key="`portrait__img--key-${i}`"/>
         </no-ssr>
@@ -40,6 +81,15 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isSp: false
+    }
+  },
+  mounted() {
+    const spWidth = 600
+    this.isSp = window.innerWidth <= spWidth
+  },
   computed: {
     ArchitectureImg() {
       return [

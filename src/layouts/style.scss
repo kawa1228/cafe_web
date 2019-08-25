@@ -33,6 +33,8 @@
   &__navi--sp {
     @include is-sp {
       visibility: visible;
+      // TODO: z-indexを管理するscssつくる
+      z-index: 1;
     }
     visibility: hidden;
 
