@@ -10,6 +10,10 @@
     display: inline-block;
 
     &__list {
+      @include is-tablet {
+        width: 70vw;
+      }
+
       display: flex;
       width: calc(100vw - 40vw);
 

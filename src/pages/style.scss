@@ -1,8 +1,27 @@
 .contents {
+  @include is-tablet {
+    flex-direction: column-reverse;
+  }
+
   display: flex;
   justify-content: center;
 
+  &__facebook {
+    @include is-tablet {
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    &__iframe {
+      width: 100%
+    }
+  }
+
   &__main {
+    @include is-tablet {
+      text-align: center;
+      margin: 0;
+    }
     text-align: left;
     margin-left: 53px;
 
