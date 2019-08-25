@@ -1,32 +1,38 @@
-.navigation__menu {
-  padding-top: 20px;
-  margin: 26px;
+.navigation {
+  @include is-sp {
+    display: none;
 
-  :not(:first-of-type) {
-    margin-left: 67px;
   }
+  &__menu {
+    padding-top: 20px;
+    margin: 26px;
 
-  &__item {
-    display: inline-block;
-    font-size: 2.2rem;
-    letter-spacing: 0.2em;
-    font-weight: 200;
+    :not(:first-of-type) {
+      margin-left: 67px;
+    }
 
-    &__link {
-      position: relative;
+    &__item {
+      display: inline-block;
+      font-size: 2.2rem;
+      letter-spacing: 0.2em;
+      font-weight: 200;
 
-      &::after {
-        position: absolute;
-        content: '';
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        border-bottom: 1.5px solid #231A17;
-        transition: all 0.3s ease 0s;
-      }
+      &__link {
+        position: relative;
 
-      &:hover::after {
-        width: 100%;
+        &::after {
+          position: absolute;
+          content: '';
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          border-bottom: 1.5px solid #231A17;
+          transition: all 0.3s ease 0s;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
   }

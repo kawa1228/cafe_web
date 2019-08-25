@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navigation">
     <ul class="navigation__menu">
       <li class="navigation__menu__item">
         <nuxt-link class="navigation__menu__item__link" to="/about">ABOUT</nuxt-link>

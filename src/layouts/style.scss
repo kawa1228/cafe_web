@@ -12,6 +12,7 @@
     top: 0;
 
     &__title {
+      background-color: rgba($color: #fff, $alpha: 0.8);
       font-size: 2rem;
       position: absolute;
       left: 0;
@@ -27,6 +28,9 @@
   }
 
   &__nuxt {
+    @include is-sp {
+      margin-top: 41px;
+    }
     padding-bottom: $footer-height;
     margin:100px 0 88px 0;
   }

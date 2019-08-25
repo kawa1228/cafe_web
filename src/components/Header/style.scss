@@ -9,6 +9,11 @@
   }
 
   &__lang {
+    @include is-sp {
+      // TODO: ハンバーガーメニューに追加する
+      display: none;
+    }
+
     position: absolute;
     top: 82px;
     right: 153px;

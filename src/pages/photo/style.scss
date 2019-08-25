@@ -11,14 +11,21 @@
       }
   }
 
+  %contents-style {
+    @include is-sp {
+      flex-direction: column;
+    }
+    display: flex;
+    justify-content: center;
+  }
+
   &__architecture {
     &__title {
       @extend %title-style;
     }
 
     &__contents {
-      display: flex;
-      justify-content: center;
+      @extend %contents-style;
     }
   }
 
@@ -28,8 +35,7 @@
     }
 
     &__contents {
-      display: flex;
-      justify-content: center;
+      @extend %contents-style;
     }
   }
 

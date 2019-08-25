@@ -13,18 +13,44 @@
       @include is-tablet {
         width: 70vw;
       }
+      @include is-sp {
+        width: 90vw;
+        flex-direction: column;
+        margin-bottom: 10px;
+      }
 
       display: flex;
       width: calc(100vw - 40vw);
 
       &__term {
+        @include is-sp {
+          width: 100%;
+          text-align: left;
+        }
+
         width: calc(100% - 63%);
         margin-right: 12px;
         display: inline-block;
         text-align: right;
+
+        &::before {
+          @include is-sp {
+            content: '【'
+          }
+        }
+
+        &::after {
+          @include is-sp {
+            content: '】'
+          }
+          content: '：'
+        }
       }
 
       &__description {
+        @include is-sp {
+          padding-left: 20px;
+        }
         display: inline-block;
 
         > dd {
@@ -35,6 +61,13 @@
 
     &__supplement {
       margin-top: 30px;
+
+      > li {
+        @include is-sp {
+          text-align: left;
+          padding-left: 20px;
+        }
+      }
 
       > li::before {
         content: '-';
