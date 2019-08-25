@@ -26,6 +26,7 @@
     "nuxt-svg-loader": "^1.0.1",
     "prettier": "^1.16.4",
     "sass-loader": "^7.1.0",
+    "vue-burger-menu": "^2.0.2",
     "vue-image-previewer": "^0.1.4",
     "vue-jest": "^3.0.3"
   }
