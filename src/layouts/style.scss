@@ -12,6 +12,9 @@
     top: 0;
 
     &__title {
+      @include is-sp {
+        display: none;
+      }
       background-color: rgba($color: #fff, $alpha: 0.8);
       font-size: 2rem;
       position: absolute;
