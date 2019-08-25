@@ -7,13 +7,6 @@
         <h2>Architecture</h2>
       </div>
       <div class="photo__architecture__contents">
-        <no-ssr>
-          <slick ref="slick" :options="slickOptions">
-            <img src="/img/Architecture01.jpg" alt="">
-            <img src="/img/Architecture02.jpg" alt="">
-            <img src="/img/Architecture03.jpg" alt="">
-          </slick>
-        </no-ssr>
         <no-ssr placeholder="Loading...">
           <vue-previewer v-for="(item, i) in ArchitectureImg" :images="item.images" mode="image" :options="item.options" :key="`architecture__img--key-${i}`"/>
         </no-ssr>
@@ -47,13 +40,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      slickOptions: {
-        arrows: false
-      }
-    }
-  },
   computed: {
     ArchitectureImg() {
       return [

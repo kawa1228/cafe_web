@@ -35,8 +35,7 @@ export default {
   */
   plugins: [
     // Nuxt.js 2.4 以降、mode: 'client'になる
-    { src: '~/plugins/vue-image-previewer.js', ssr: false },
-    { src: '~/plugins/vue-slick.js', ssr: false }
+    { src: '~/plugins/vue-image-previewer.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
