@@ -27,6 +27,43 @@
     }
   }
 
+  &__navi--sp {
+    @include is-sp {
+      visibility: visible;
+    }
+    visibility: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 124px;
+    left: 0;
+    background: #fff;
+    opacity: 0.9;
+
+    &__list {
+      padding: 20px;
+      &__item {
+        padding: 10px;
+        border-bottom: 1px solid #000;
+        &:first-child {
+          border-top: 1px solid #000;
+        }
+
+        & > a {
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+        }
+      }
+
+      &__access {
+        margin-top: 30px
+      }
+    }
+  }
+
   &__nuxt {
     @include is-sp {
       margin-top: 20px;
