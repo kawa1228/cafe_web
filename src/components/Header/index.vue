@@ -3,6 +3,10 @@
     <nuxt-link to="/">
       <CreeksLogo class="header__logo"/>
     </nuxt-link>
+    <div class="header__menu">
+      <MenuIcon class="header__menu__icon"/>
+      <span class="header__menu__text">Menu</span>
+    </div>
     <div class="header__lang">
       <nuxt-link to="/">JP</nuxt-link>
       <nuxt-link :class="selectedStyle" to="/">EN</nuxt-link>
@@ -12,10 +16,12 @@
 
 <script>
 import CreeksLogo from '~/assets/svg/CreeksLogo.svg'
+import MenuIcon from '~/assets/svg/MenuIcon.svg'
 
 export default {
   components: {
-    CreeksLogo
+    CreeksLogo,
+    MenuIcon
   },
   computed: {
     selectedStyle() {
