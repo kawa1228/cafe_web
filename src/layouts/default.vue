@@ -38,7 +38,6 @@ export default {
     handleScroll() {
       const header = this.$refs['header'].$el
       const rect = header.getBoundingClientRect()
-      console.log(rect.height + rect.top)
       this.isShowTitle = (rect.height + rect.top) <= 15
     }
   }
