@@ -1,0 +1,7 @@
+@mixin is-tablet {
+  @media (max-width: 959px) { @content; }
+}
+
+@mixin is-sp {
+  @media (max-width: 559px) { @content; }
+}
