@@ -5,14 +5,6 @@
       <transition name="title-fade">
         <h1 v-if="isShowTitle" class="default-layout__navi__title">Creek's Cafe</h1>
       </transition>
-      <no-ssr>
-        <Slide class="default-layout__slide-menu">
-          <nuxt-link to="/">Home</nuxt-link>
-          <nuxt-link to="/photo">Photo</nuxt-link>
-          <nuxt-link to="/menu">Menu</nuxt-link>
-          <nuxt-link to="/about">About</nuxt-link>
-        </Slide>
-      </no-ssr>
       <Navigation/>
     </div>
     <nuxt class="default-layout__nuxt"/>
