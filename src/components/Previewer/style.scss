@@ -1,0 +1,7 @@
+.previewer {
+  @include is-sp {
+    flex-direction: column;
+  }
+  display: flex;
+  justify-content: center;
+}
