@@ -40,13 +40,18 @@
 <script>
 export default {
   mounted() {
-    const spWidth = 600
-    if (window.innerWidth <= spWidth ) {
-      // spのmap幅を変更
-      const map = document.querySelector('.about__map__iframe')
-      // TODO: set width window.innnerWidthができないので確認
-      // とりあえずSE幅に合わせる
-      map.setAttribute('width', '320')
+    this.setGooglemapIframeWidth()
+  },
+  methods: {
+    setGooglemapIframeWidth() {
+      const spWidth = 600
+      if (window.innerWidth <= spWidth ) {
+        // spのmap幅を変更
+        const map = document.querySelector('.about__map__iframe')
+        // TODO: set width window.innnerWidthができないので確認
+        // とりあえずSE幅に合わせる
+        map.setAttribute('width', '320')
+      }
     }
   }
 }
