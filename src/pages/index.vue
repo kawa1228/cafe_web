@@ -28,14 +28,27 @@ export default {
     }
   },
   mounted() {
-    const tabletWidth = 960
-    if (window.innerWidth <= tabletWidth ) {
-      // タブレット以下でfacebookの幅を変更
+    this.checkIsSeDevice();
+    this.setFacebookIframeWidth();
+  },
+  methods: {
+    // SEのみ文章の改行をする
+    checkIsSeDevice() {
+      const seWidth = 320
+      this.isSE = window.innerWidth <= seWidth
+    },
+    // デバイスごとにfacebookのiframe幅を変更
+    setFacebookIframeWidth() {
+      const tabletWidth = 960
+      const spWidth = 560
       const facebook = document.querySelector('.contents__facebook__iframe')
-      facebook.setAttribute('width', "500")
+
+      if (spWidth <= window.innerWidth <= tabletWidth ) {
+        facebook.setAttribute('width', "500")
+      } else if (window.innerWidth <= spWidth) {
+        facebook.setAttribute('width', "320")
+      }
     }
-    const seWidth = 320
-    this.isSE = window.innerWidth <= seWidth
   }
 }
 </script>
