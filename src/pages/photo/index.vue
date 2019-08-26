@@ -7,22 +7,14 @@
         <h2>Architecture</h2>
       </div>
       <Carousel v-if="isSp" :images="architectureImages"/>
-      <div v-else class="photo__architecture__contents">
-        <no-ssr placeholder="Loading...">
-          <vue-previewer v-for="(item, i) in ArchitectureImg" :images="item.images" mode="image" :options="item.options" :key="`architecture__img--key-${i}`"/>
-        </no-ssr>
-      </div>
+      <Previewer v-else :previewItems="architectureItems"/>
     </section>
     <section class="photo__portrait">
       <div class="photo__portrait__title">
         <h2>Portrait</h2>
       </div>
       <Carousel v-if="isSp" :images="portraitImages"/>
-      <div v-else class="photo__portrait__contents">
-        <no-ssr placeholder="Loading...">
-          <vue-previewer v-for="(item, i) in PortraitImg" :images="item.images" mode="image" :options="item.options" :key="`portrait__img--key-${i}`"/>
-        </no-ssr>
-      </div>
+      <Previewer v-else :previewItems="portraitItems"/>
     </section>
     <section class="photo__auther">
       <h2 class="photo__auther__name">小川博彦（おがわ ひろひこ）</h2>
@@ -42,14 +34,17 @@
 
 <script>
 import Carousel from '~/components/Carousel'
+import Previewer from '~/components/Previewer'
 
 export default {
   components: {
-    Carousel
+    Carousel,
+    Previewer
   },
   data() {
     return {
       isSp: false,
+      // sp用
       architectureImages: [
         { src: '/img/Architecture01.jpg', alt: '' },
         { src: '/img/Architecture02.jpg', alt: '' },
@@ -59,27 +54,27 @@ export default {
         { src: '/img/Portrait01.jpg', alt: '' },
         { src: '/img/Portrait02.jpg', alt: '' },
         { src: '/img/Portrait03.jpg', alt: '' }
-      ]
-    }
-  },
-  mounted() {
-    const spWidth = 600
-    this.isSp = window.innerWidth <= spWidth
-  },
-  computed: {
-    ArchitectureImg() {
-      return [
+      ],
+      // pc用
+      architectureItems: [
         { images: [{src: '/img/Architecture01.jpg'}], options: {defaultWidth: '375px', defaultHeight: '251px'} },
         { images: [{src: '/img/Architecture02.jpg'}], options: {defaultWidth: '167px', defaultHeight: '251px'} },
         { images: [{src: '/img/Architecture03.jpg'}], options: {defaultWidth: '167px', defaultHeight: '251px'} }
-      ]
-    },
-    PortraitImg() {
-      return [
+      ],
+      portraitItems: [
         { images: [{src: '/img/Portrait01.jpg'}], options: {defaultWidth: '168px', defaultHeight: '251px'} },
         { images: [{src: '/img/Portrait02.jpg'}], options: {defaultWidth: '376px', defaultHeight: '251px'} },
         { images: [{src: '/img/Portrait03.jpg'}], options: {defaultWidth: '167px', defaultHeight: '251px'} }
       ]
+    }
+  },
+  mounted() {
+    this.checkIsSpDevice()
+  },
+  methods: {
+    checkIsSpDevice() {
+     const spWidth = 600
+     this.isSp = window.innerWidth <= spWidth
     }
   }
 }

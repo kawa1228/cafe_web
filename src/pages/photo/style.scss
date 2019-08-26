@@ -11,32 +11,15 @@
       }
   }
 
-  %contents-style {
-    @include is-sp {
-      flex-direction: column;
-    }
-    display: flex;
-    justify-content: center;
-  }
-
   &__architecture {
-    // TODO: @forを使うとよいかも
     &__title {
       @extend %title-style;
-    }
-
-    &__contents {
-      @extend %contents-style;
     }
   }
 
   &__portrait {
     &__title {
       @extend %title-style;
-    }
-
-    &__contents {
-      @extend %contents-style;
     }
   }
 
