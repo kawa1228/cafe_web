@@ -6,27 +6,7 @@
       <div class="photo__architecture__title">
         <h2>Architecture</h2>
       </div>
-      <!-- TODO: コンポーネントに分ける -->
-      <no-ssr v-if="isSp">
-        <carousel
-          class="photo__architecture__carousel"
-          :per-page="1"
-          :navigation-enabled="true"
-          navigation-prev-label="〈"
-          navigation-next-label="〉"
-          :pagination-enabled="true"
-        >
-          <slide>
-            <img class="photo__architecture__carousel__slide__img" src='/img/Architecture01.jpg' alt="">
-          </slide>
-          <slide>
-            <img class="photo__architecture__carousel__slide__img" src='/img/Architecture02.jpg' alt="">
-          </slide>
-          <slide>
-            <img class="photo__architecture__carousel__slide__img" src='/img/Architecture03.jpg' alt="">
-          </slide>
-        </carousel>
-      </no-ssr>
+      <Carousel v-if="isSp"/>
       <div v-else class="photo__architecture__contents">
         <no-ssr placeholder="Loading...">
           <vue-previewer v-for="(item, i) in ArchitectureImg" :images="item.images" mode="image" :options="item.options" :key="`architecture__img--key-${i}`"/>
@@ -80,7 +60,12 @@
 </style>
 
 <script>
+import Carousel from '~/components/Carousel'
+
 export default {
+  components: {
+    Carousel
+  },
   data() {
     return {
       isSp: false
