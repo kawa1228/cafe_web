@@ -6,7 +6,7 @@
       <div class="photo__architecture__title">
         <h2>Architecture</h2>
       </div>
-      <Carousel v-if="isSp"/>
+      <Carousel v-if="isSp" :images="architectureImages"/>
       <div v-else class="photo__architecture__contents">
         <no-ssr placeholder="Loading...">
           <vue-previewer v-for="(item, i) in ArchitectureImg" :images="item.images" mode="image" :options="item.options" :key="`architecture__img--key-${i}`"/>
@@ -17,26 +17,7 @@
       <div class="photo__portrait__title">
         <h2>Portrait</h2>
       </div>
-      <no-ssr v-if="isSp">
-        <carousel
-          class="photo__architecture__carousel"
-          :per-page="1"
-          :navigation-enabled="true"
-          navigation-prev-label="〈"
-          navigation-next-label="〉"
-          :pagination-enabled="true"
-        >
-          <slide>
-            <img class="photo__architecture__carousel__slide__img" src='/img/Portrait01.jpg' alt="">
-          </slide>
-          <slide>
-            <img class="photo__architecture__carousel__slide__img" src='/img/Portrait02.jpg' alt="">
-          </slide>
-          <slide>
-            <img class="photo__architecture__carousel__slide__img" src='/img/Portrait03.jpg' alt="">
-          </slide>
-        </carousel>
-      </no-ssr>
+      <Carousel v-if="isSp" :images="portraitImages"/>
       <div v-else class="photo__portrait__contents">
         <no-ssr placeholder="Loading...">
           <vue-previewer v-for="(item, i) in PortraitImg" :images="item.images" mode="image" :options="item.options" :key="`portrait__img--key-${i}`"/>
@@ -68,7 +49,17 @@ export default {
   },
   data() {
     return {
-      isSp: false
+      isSp: false,
+      architectureImages: [
+        { src: '/img/Architecture01.jpg', alt: '' },
+        { src: '/img/Architecture02.jpg', alt: '' },
+        { src: '/img/Architecture03.jpg', alt: '' }
+      ],
+      portraitImages: [
+        { src: '/img/Portrait01.jpg', alt: '' },
+        { src: '/img/Portrait02.jpg', alt: '' },
+        { src: '/img/Portrait03.jpg', alt: '' }
+      ]
     }
   },
   mounted() {

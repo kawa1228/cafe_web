@@ -8,14 +8,8 @@
       navigation-next-label="〉"
       :pagination-enabled="true"
     >
-      <slide>
-        <img class="carousel__slide__img" src='/img/Architecture01.jpg' alt="">
-      </slide>
-      <slide>
-        <img class="carousel__slide__img" src='/img/Architecture02.jpg' alt="">
-      </slide>
-      <slide>
-        <img class="carousel__slide__img" src='/img/Architecture03.jpg' alt="">
+      <slide v-for="(img, i) in images" :key="`carousel__key-${i}`">
+        <img class="carousel__slide__img" :src="img.src" :alt="img.alt">
       </slide>
     </carousel>
   </no-ssr>
@@ -23,7 +17,12 @@
 
 <script>
 export default {
-  //
+  props: {
+    images: {
+      type: Array,
+      default: null
+    }
+  }
 }
 </script>
 
