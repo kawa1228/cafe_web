@@ -1,19 +1,8 @@
 <template>
   <div class="default-layout">
     <Header ref="header" :isOpenedMenu="isOpenedMenu" @open-menu="openedMenu" @close-menu="closedMenu"/>
-    <!-- TODO: 一連の処理を含めコンポーネントにわける -->
     <transition name="menu">
-      <div v-if="isOpenedMenu" class="default-layout__navi--sp">
-        <ul class="default-layout__navi--sp__list">
-          <li class="default-layout__navi--sp__list__item" v-for="(item, i) in menuList" :key="`navi--sp__list__item--${i}`">
-            <nuxt-link @click.native="closedMenu" :to="item.link">{{ item.title }}</nuxt-link>
-          </li>
-          <div class="default-layout__navi--sp__list__access">
-            <p>〒436-0079　静岡県掛川市掛川1070-12</p>
-            <p>JR東海道本線「掛川駅」より徒歩10分</p>
-          </div>
-        </ul>
-      </div>
+      <SpMenu v-if="isOpenedMenu" @close-menu="closedMenu"/>
     </transition>
     <div class="default-layout__navi">
       <transition name="title-fade">
@@ -28,6 +17,7 @@
 
 <script>
 import Header from '~/components/Header'
+import SpMenu from '~/components/SpMenu'
 import Navigation from '~/components/Navigation'
 import Footer from '~/components/Footer'
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
@@ -35,19 +25,14 @@ import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'bo
 export default {
   components: {
     Header,
+    SpMenu,
     Navigation,
     Footer
   },
   data() {
     return {
       isShowTitle: false,
-      isOpenedMenu: false,
-      menuList: [
-        {title: 'HOME', link: '/'},
-        {title: 'ABOUT', link: '/about'},
-        {title: 'MENU', link: '/menu'},
-        {title: 'PHOTO', link: '/photo'}
-      ]
+      isOpenedMenu: false
     }
   },
   watch: {
